@@ -1,0 +1,28 @@
+universes:
+  example.com:
+    images:
+      type: aws  # also support GCR
+      region: us-east-1
+      name: 11somenumber11 # should resolve to XXXX.dkr.ecr.us-east-1.amazonaws.com
+    dns:
+      type: aws
+      hosted_zone: ZEEHOSTEDZONE
+      sleep_time: 5
+    galaxies:
+      prod:
+        - east
+        - west
+      dev:
+        - toy
+    clusters:
+      toy:
+        type: aws
+        region: us-east-2
+      east:
+        type: aws
+        region: us-east-1
+        prompt_on_update: True
+      west:
+        type: aws
+        region: us-east-1
+        prompt_on_update: True
